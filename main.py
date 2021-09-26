@@ -1,11 +1,12 @@
 # coding: u8
 
 import re
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from string import Template
 from urllib import request
 
-build_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+tz_utc_8 = timezone(timedelta(hours=8))
+build_time = datetime.now(tz=tz_utc_8).strftime("%Y-%m-%d %H:%M:%S")
 
 url = 'https://anti-ad.net/surge.txt'
 rules = request.urlopen(url).read().decode('u8')

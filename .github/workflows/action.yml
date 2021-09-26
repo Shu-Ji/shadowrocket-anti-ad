@@ -1,0 +1,38 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Cron
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '0 */2 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name:  安装 Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: '生成配置文件'
+      run: python ./main.py
+
+    - name: '提交配置文件'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "自动生成配置文件" -a
+    - name: '推送到 Github 仓库'
+      uses: Shu-Ji/shadowrocket-anti-ad@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

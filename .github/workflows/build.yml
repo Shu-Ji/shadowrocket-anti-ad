@@ -17,7 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name:  安装 Python 3.9
       uses: actions/setup-python@v2
       with:
@@ -26,13 +29,13 @@ jobs:
     - name: '生成配置文件'
       run: python ./main.py
 
-    - name: '提交配置文件'
+    - name: Commit files
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git commit -m "自动生成配置文件" -a
-    - name: '推送到 Github 仓库'
-      uses: Shu-Ji/shadowrocket-anti-ad@master
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}

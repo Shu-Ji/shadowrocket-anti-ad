@@ -27,10 +27,10 @@ jobs:
       run: python ./main.py
 
     - name: '提交配置文件'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "自动生成配置文件" -a
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "自动生成配置文件" -a
     - name: '推送到 Github 仓库'
       uses: Shu-Ji/shadowrocket-anti-ad@master
       with:

@@ -5,6 +5,8 @@
 支持广告过滤，广告过滤定时同步自 
 [anti-AD](https://github.com/privacy-protection-tools/anti-AD) 项目。
 
+大部分视频广告，APP 内广告，微信朋友圈广告均可屏蔽，APP 开屏广告目前仅发现12306能够屏蔽，如果您有规则，可发起 PR，加入。
+
 配置链接会每天自动更新。
 
 ## 使用方法

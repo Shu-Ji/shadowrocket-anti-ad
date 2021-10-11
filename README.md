@@ -22,3 +22,7 @@ https://raw.githubusercontent.com/Shu-Ji/shadowrocket-anti-ad/master/rules/sr-an
 下载成功后，点击刚刚添加的链接，「使用配置」：
 
 <img src="https://user-images.githubusercontent.com/1127594/136726863-1884b01c-1f5d-4cfb-84d5-cd76ccaa4ba3.PNG" width="200">
+
+## 提醒事项
+
+如果你在玩某某百景图游戏，通过观看广告做任务，此时广告看不了了，需要临时关闭一下小火箭。

@@ -3,7 +3,9 @@
 国内网站直连，国外网站走代理。
 
 支持广告过滤，广告过滤定时同步自 
-[anti-AD](https://github.com/privacy-protection-tools/anti-AD) 项目。
+<s>[anti-AD](https://github.com/privacy-protection-tools/anti-AD) </s>
+[neodevhost](https://github.com/neodevpro/neodevhost) 
+项目。
 
 大部分视频广告，APP 内广告，微信公众号文章内广告均可屏蔽，APP 开屏广告目前仅发现12306能够屏蔽，如果您有规则，可发起 PR，加入。
 

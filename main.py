@@ -30,8 +30,8 @@ def download_from_neodevhost():
     return '\n'.join(res)
 
 
-# rules = download_from_anti_ad()
-rules = download_from_neodevhost()
+rules = download_from_anti_ad()
+# rules = download_from_neodevhost()
 
 tmp = Template(open('./sr-template.conf').read())
 rules = tmp.substitute(build_time=build_time, rules=rules)

@@ -28,3 +28,10 @@ https://raw.githubusercontent.com/Shu-Ji/shadowrocket-anti-ad/master/rules/sr-an
 ## 提醒事项
 
 如果你在玩某某百景图游戏，通过观看广告做任务，此时广告看不了了，需要临时关闭一下小火箭。
+
+
+## Number of historical stars
+![](https://starchart.cc/Shu-Ji/shadowrocket-anti-ad.svg)
+
+## Views
+![](http://profile-counter.glitch.me/shadowrocket-anti-ad/count.svg)

@@ -5,6 +5,7 @@ from datetime import datetime, timezone, timedelta
 from string import Template
 import httpx
 
+
 tz_utc_8 = timezone(timedelta(hours=8))
 build_time = datetime.now(tz=tz_utc_8).strftime("%Y-%m-%d")
 

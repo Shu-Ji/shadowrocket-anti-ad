@@ -1,0 +1,11 @@
+[project]
+name = "shadowrocket-anti-ad"
+version = "0.1.0"
+description = "Generate Shadowrocket anti-ad rules"
+requires-python = ">=3.14"
+dependencies = [
+    "httpx>=0.28,<1",
+]
+
+[tool.uv]
+package = false

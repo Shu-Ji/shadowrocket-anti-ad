@@ -14,7 +14,7 @@ def download_from_anti_ad():
     """https://github.com/privacy-protection-tools/anti-AD"""
 
     url = 'https://anti-ad.net/surge.txt'
-    rules = httpx.get(url).content.decode('u8')
+    rules = httpx.get(url, timeout=30).content.decode('u8')
     rules = re.sub(r'DOMAIN-SUFFIX,(.*)', r'DOMAIN-SUFFIX,\1,REJECT', rules)
     return rules
 
@@ -24,7 +24,7 @@ def download_from_neodevhost():
 
     res = []
     url = 'https://neodev.team/lite_domain'
-    rules = httpx.get(url).content.decode('u8').splitlines()
+    rules = httpx.get(url, timeout=30).content.decode('u8').splitlines()
     for rule in rules:
         if rule and not rule.startswith('#'):
             res.append(f'DOMAIN-SUFFIX,{rule},REJECT')
